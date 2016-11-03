@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+
+<head>
+    <title>Sachin Tendulkar</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Load Bootstrap via CDN-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" defer>
+    <!--Load font-awesome via CDN-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" defer>
+    <!--Load css file-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Sachin Tendulkar</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><i class="fa fa-home"> Home</i></a>
+                    </li>
+                    <li><a href="#/records"><i class="fa fa-database" aria-hidden="true"> Records</i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- /header -->
+
+    <div class="row">
+        <div class="col-md-12 pageHeader">
+            <img src="img/img2.jpg" alt="sachin" class="img-responsive">
+            <div class="quotes">
+                <h3 style="font-size: 2em;"><q> Don’t stop chasing your dreams, because dreams do come true.</q></h3>
+                <p><i class="pull-right" style="color: #fff">- Sachin Tendulkar</i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div data-ng-view></div>
+    </div><!-- /.container-->
+
+    <!--Load Angular via CDN-->
+    <script src="//code.angularjs.org/1.3.0-rc.2/angular.min.js"></script>
+    <!--Load Route via CDN-->
+    <script src="//code.angularjs.org/1.3.0-rc.2/angular-route.min.js"></script>
+    <!--Load Resource via CDN-->
+    <script src="//code.angularjs.org/1.3.0-rc.2/angular-resource.min.js"></script>
+    <!--Load local app.js file-->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
