@@ -1,0 +1,40 @@
+<!--profile.html-->
+<div class="detailContainer">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Personal Details</h1>
+                </div>
+                <div class="panel-body">
+                    <p><b>Name</b>: {{fullname(crickResults.query.results.PlayerProfile.PersonalDetails.FirstName, crickResults.query.results.PlayerProfile.PersonalDetails.LastName)}}</p>
+                    <p><b>Date Of Birth</b>: {{convertDate(crickResults.query.results.PlayerProfile.PersonalDetails.DateOfBirth)|date: "MMM d, y"}}</p>
+                    <p><b>Place Of Birth</b>: {{crickResults.query.results.PlayerProfile.PersonalDetails.PlaceOfBirth.City}}</p>
+                    <p><b>Aliases</b>: <span ng-repeat="a in crickResults.query.results.PlayerProfile.PersonalDetails.Aliases.Aliase">{{a}} </span></p>
+                    <p><b>Country Code</b>: {{crickResults.query.results.PlayerProfile.PersonalDetails.PlaceOfBirth.CountryCode}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Profile</h1>
+                </div>
+                <div class="panel-body about">
+                    <p>Sachin Tendulkar can unquestionably be called the 'face of modern cricket'. He follows Sir Donald Bradman and Sir Vivian Richards as his generation's most successful batsman. The only close competitors Tendulkar has faced are Brian Lara and in more recent times, Ricky Ponting. Statistically, while Bradman scaled unreachable heights, Tendulkar, by his sheer consistency and longevity, marked his era with sheer greatness and enormous fan-following that shall, like the Australian great, probably never be conquered.<br /> <br /> By the advent of the 20th century, watching Tendulkar as India's lone warrior, staging single-handed fights and carrying the hopes of a billion hearts was cricket's grandest spectacle. Too often, his achievements would be let down by lack of support from teammates. Yet, his ability to continue to live to fight another day, shoulder blame unfairly and always delve into positives, transcends Tendulkar beyond a cricketing icon to a role model and a prized treasure for the often-tarnished image of the sport. Tendulkar went on to be the game's leading run-getter, half-centurion and centurion in the two most prominent forms of the game.<br /> <br /> He didn't have the best of starts in international cricket - a duck on ODI debut and an unflattering 15 in his maiden Test inning against Pakistan as a 16-year-old. It underlines the old adage of attitude over talent reminding everyone that even legends have to struggle to find their feet. He did make it big, one small step at a time. First replacing Sanjay Manjrekar as India's most formidable batsman of the time and then becoming the only contender to Sunil Gavaskar's stature in Indian batting history. Finally, even the great Sir Don Bradman drew parallels between himself and Tendulkar. In between, captaincy called on him on a few occasions, but it was one thing he wasn't cut out for. He always enjoyed and more importantly, planned before-hand on how to deal with some of the toughest bowlers in the world. Hence, he had enjoyed far more success in comparison with other great batsmen in the world, against the likes of some of the most dangerous bowlers in the world. Shane Warne, Glenn McGrath, Wasim Akram were some of them.<br /> <br /> With the passage of time, came India's ascendency after disappointing pasts during Tendulkar's foray at the peak of his career. He was now provided with the long-awaited support crew. But he still remained the mainstay while guiding his nation towards the summit of Test rankings.<br /> <br /> Tendulkar's long-awaited dream was finally fulfilled when he, as part of Team India, emerged victorious in the 2011 ICC Cricket World Cup. Throughout the tournament, he was a consistent performer with the bat.<br /> <br /> Virat Kohli perfectly summed up the sentiment of many when he famously said, &quot;Sachin Tendulkar has carried the burden of the nation's expectations for 21 years.&quot; The Master added another feather to his cap when he scored his 100th international hundred in the 2012 Asia Cup against Bangladesh after a year long wait. Tendulkar admitted he was under severe pressure but was relieved to have the monkey off his back. However, the rest of the year wasn't productive as Tendulkar struggled to score runs.<br /> <br /> At the end of 2012, Tendulkar finally announced his ODI retirement with an aim to prolong his Test career but that decision backfired. He then bade an emotional goodbye from all forms of cricket post the home Test series against West Indies in 2013, in front of a jam-packed, emotional home crowd at the Wankhede Stadium.</p><br/><b>Fast Facts</b><br/><br/>
+                    <ul>
+                        <li>Sachin Tendulkar is the world&rsquo;s leading run-getter and centurion in Tests and ODIs.</li>
+                        <li>He became the first batsman to score a double century in ODI cricket.</li>
+                        <li>Tendulkar is the only player to record 100 international centuries.</li>
+                        <li>He became the first batsman in history to record more than 15,000 runs in both Tests and ODIs.</li>
+                        <li>&ldquo;The Little Master&rdquo; was the first batsman in ODIs to reach the 10,000 run milestone.</li>
+                        <li>He holds the record as the youngest Indian to make a debut in international cricket.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

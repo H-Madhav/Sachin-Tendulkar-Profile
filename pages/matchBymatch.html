@@ -1,0 +1,27 @@
+<h1>Match Results</h1>
+
+<section ng-repeat="m in match">
+    <h3></h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Battingscore</th>
+                <th>opp</th>
+                <th>ground</th>
+                <th>date</th>
+                <th>matchresult</th>
+                <th>resultmargin</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">{{m.battingscore}}</th>
+                <td>{{m.opposition}}</td>
+                <td>{{m.ground}}</td>
+                <td>{{convertDate(m.date)|date: "MMM d, y"}}</td>
+                <td>{{m.matchresult}}</td>
+                <td>{{m.resultmargin}}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>

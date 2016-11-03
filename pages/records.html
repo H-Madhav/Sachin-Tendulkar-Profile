@@ -1,0 +1,94 @@
+<!--record.html-->
+<section ng-repeat="m in crickResults.query.results.PlayerProfile.CareerDetails.MatchStats">
+    <h3>{{m.mtype}} Career Summary</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Batting</th>
+                <th>M</th>
+                <th>inn</th>
+                <th>NO</th>
+                <th>Runs</th>
+                <th>HS</th>
+                <th>Avg</th>
+                <th>SR</th>
+                <th>100</th>
+                <th>50</th>
+                <th>4s</th>
+                <th>6s</th>
+                <th>Ducks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">{{crickResults.query.results.PlayerProfile.CareerDetails.Style.Batting}}</th>
+                <td>{{m.Batting[0].Matches}}</td>
+                <td>{{m.Batting[0].Innings}}</td>
+                <td>{{m.Batting[0].NotOuts}}</td>
+                <td>{{m.Batting[0].Runs}}</td>
+                <td>{{m.Batting[0].Highest.RunsScored.content}}</td>
+                <td>{{m.Batting[0].Average}}</td>
+                <td>{{m.Batting[0].StrikeRate}}</td>
+                <td>{{m.Batting[0].Hundreds}}</td>
+                <td>{{m.Batting[0].Fifties}}</td>
+                <td>{{m.Batting[0].Fours}}</td>
+                <td>{{m.Batting[0].Sixes}}</td>
+                <td>{{m.Batting[0].Ducks}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-bordered table-inverse">
+        <thead>
+            <tr>
+                <th>Bowling</th>
+                <th>M</th>
+                <th>inn</th>
+                <th>B</th>
+                <th>Runs</th>
+                <th>Wkts</th>
+                <th>BBI</th>
+                <th>Econ</th>
+                <th>Avg</th>
+                <th>4W</th>
+                <th>5W</th>
+                <th>10W</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">{{crickResults.query.results.PlayerProfile.CareerDetails.Style.Bowling}}</th>
+                <td>{{m.Bowling[0].Matches}}</td>
+                <td>{{m.Bowling[0].Innings}}</td>
+                <td>{{m.Bowling[0].Balls}}</td>
+                <td>{{m.Bowling[0].Runs}}</td>
+                <td>{{m.Bowling[0].Wickets}}</td>
+                <td>{{m.Bowling[0].BBI.WicketsTaken+'/'+ m.Bowling[0].BBI.RunsGiven }}</td>
+                <td>{{m.Bowling[0].EconomyRate}}</td>
+                <td>{{m.Bowling[0].Average}}</td>
+                <td>{{m.Bowling[0].FourWickets}}</td>
+                <td>{{m.Bowling[0].FiveWickets}}</td>
+                <td>{{m.Bowling[0].TenWickets}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Debut Date</th>
+                <th>Debut Vs</th>
+                <th>Last Played Date</th>
+                <th>Last Played Vs</th>
+                <th>MOM</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">{{convertDate(m.Debut.Date)|date: "MMM d, y"}}</th>
+                <td>{{m.Debut.Team[1].content}}</td>
+                <td>{{convertDate(m.LastPlayed.Date)|date: "MMM d, y"}}</td>
+                <td>{{m.LastPlayed.Team[1].content}}</td>
+                <td>{{m.MOM}}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
